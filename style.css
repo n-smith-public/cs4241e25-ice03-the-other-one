@@ -1,0 +1,129 @@
+html {
+    background-color: #222;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+    margin-left: 25px;
+}
+
+#volume {
+    width: 150px;
+    height: 5px;
+    background: #555;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#volume::-webkit-slider-thumb {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#volume::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+}
+
+#volume-value {
+    min-width: 35px;
+    font-weight: bold;
+}
+
+.keyboard {
+    display: flex;
+    overflow-x: auto;
+    padding: 20px;
+    background: #333;
+}
+
+.key {
+    border: 1px solid #ccc;
+    cursor: pointer;
+    user-select: none;
+    font-size: 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5px 2px;
+    transition: background-color 0.1s ease;
+}
+
+.white-key {
+    width: 35px;
+    height: 120px;
+    background: #fff;
+    color: black;
+    margin-right: 1px;
+    padding-bottom: 8px;
+}
+
+.black-key {
+    width: 25px;
+    height: 80px;
+    background: #000;
+    color: white;
+    margin-left: -11px;
+    margin-right: -10px;
+    z-index: 1;
+    position: relative;
+    padding-bottom: 8px;
+    font-size: 8px;
+}
+
+.white-key:active,
+.white-key.drag-active {
+    background:  var(--active-color, #59a2dd) !important;
+}
+
+.black-key:active,
+.black-key.drag-active {
+    background: var(--active-color, #35718f) !important;
+}
+
+.chord-dis {
+    background-color: #444;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.chord-dis h3 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+}
+
+.chord-dis p {
+    margin: 0;
+    font-size: 16px;
+    color: #ccc;
+}
+
+#chord-name {
+    color: #4CAF50;
+    font-weight: bold;
+}
